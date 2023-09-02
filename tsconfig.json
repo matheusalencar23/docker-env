@@ -4,14 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "paths": {
-      "design-system": [
-        "dist/design-system"
-      ],
-      "design-system/*": [
-        "dist/design-system/*"
-      ]
-    },
+    "paths": {},
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
