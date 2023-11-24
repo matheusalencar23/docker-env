@@ -1,5 +1,7 @@
 # DockerEnv
 
+Run `docker build -t matheusalencar/server:1.0 .` to build docker image
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
