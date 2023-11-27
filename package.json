@@ -3,22 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "run-p build:libs:watch start:apps",
-    "build": "run-p build:libs build:home build:projects build:blog",
+    "start": "npm run start:apps",
+    "build": "run-p build:home build:projects build:blog",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "clean": "rimraf ./dist",
     "start:home": "ng serve --project home --port 4200",
     "start:projects": "ng serve --project projects --port 4201",
     "start:blog": "ng serve --project blog --port 4202",
-    "start:apps": "wait-on dist/common/header/public-api.d.ts && run-p start:home start:projects start:blog",
+    "start:apps": "run-p start:home start:projects start:blog",
     "build:home": "ng build --project home -c production",
     "build:projects": "ng build --project projects -c production",
-    "build:blog": "ng build --project blog -c production",
-    "build:lib:header": "ng build @common/header",
-    "build:lib:header:watch": "ng build @common/header --watch",
-    "build:libs": "run-p build:lib:header",
-    "build:libs:watch": "npm run clean && run-p build:lib:header:watch"
+    "build:blog": "ng build --project blog -c production"
   },
   "private": true,
   "dependencies": {
